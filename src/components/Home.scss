@@ -1,6 +1,47 @@
 // src/components/Home.scss
-.jumbotron {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    padding: 2rem 1rem;
-  }
-  
+
+/* Barva pozadí obrázku (přibližně odpovídající barvě pozadí obrázku) */
+.hero-section {
+  background: linear-gradient(to right, #005f73, #f0f8ff);
+  min-height: 66vh; /* Nastavení výšky hero sekce na 2/3 obrazovky */
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-width: 66%; /* Maximální šířka obrázku */
+  max-height: 66vh; /* Maximální výška obrázku */
+  border-radius: 50%; /* Nastavení kulatého obrázku */
+  transition: transform 0.5s ease-in-out; /* Přechod pro animaci */
+}
+
+.hero-image img:hover {
+  transform: rotate(360deg); /* Animace otočení při najetí myší */
+}
+
+.hero-text {
+  max-width: 33%;
+  text-align: left;
+  color: #000; /* Barva textu */
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Upravená velikost */
+  margin-bottom: 1rem;
+  letter-spacing: 2px; /* Roztáhnutí textu */
+}
+
+.hero-text p {
+  font-size: 1.5rem; /* Upravená velikost */
+  margin-bottom: 2rem;
+}
+
+.hero-text button {
+  font-size: 1.25rem; /* Upravená velikost */
+  padding: 0.5rem 1.5rem;
+}

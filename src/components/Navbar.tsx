@@ -2,10 +2,11 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import "./Navbar.scss";
 
 const AppNavbar: React.FC = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="light" expand="lg" className="custom-navbar">
       <Container>
         <Navbar.Brand href="#">Octopod Systems</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.scss';
 
 const App = () => {
   return (
