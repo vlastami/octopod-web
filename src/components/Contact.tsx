@@ -13,7 +13,7 @@ const Contact: React.FC<{ className?: string }> = ({ className }) => {
             Kontaktujte nás pro více informací nebo konzultaci ohledně vašeho
             projektu.
           </p>
-          {/* Přidejte další obsah podle potřeby */}
+          <p className="contact-description mail">michalcova@gmail.com</p>
         </Col>
       </Row>
     </Container>

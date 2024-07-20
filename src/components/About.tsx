@@ -1,7 +1,9 @@
 // src/components/About.tsx
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "./About.scss";
+import PavelPhoto from "../assets/pavel.png";
+import VlastaPhoto from "../assets/vlasta.png";
 
 const About: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -16,27 +18,52 @@ const About: React.FC<{ className?: string }> = ({ className }) => {
           </p>
           <p className="about-description">
             Naše služby zahrnují automatizaci procesů a využití umělé
-            inteligence, abychom mohli přinést chytrá a efektivní řešení na míru
-            vašim požadavkům. Jsme schopni vyvinout mobilní, webové i desktopové
-            aplikace.
+            inteligence, abychom dodali chytrá a efektivní řešení na míru vašim
+            požadavkům. Jsme schopni vyvinout mobilní, webové i desktopové
+            aplikace, poskytnout poradenství nebo nabídnout dlouhodobou
+            spolupráci.
           </p>
           <h3 className="about-team-title">Náš tým</h3>
-          <ul className="about-team">
-            <li>
-              <strong>Pavel Michalec</strong> - Backend vývojář, specialista na
-              Java a Spring s pěti lety zkušeností. Pavel se zaměřuje na
-              technologie a automatizaci.
-            </li>
-            <li>
-              <strong>Vlasta Michalcová</strong> - Frontend vývojářka pracující
-              v React/React Native a Typescript s dvouletou praxí. Vlasta má
-              zájem o (počítačovou) lingvistiku.
-            </li>
-          </ul>
+          <Row className="about-team">
+            <Col md={6} className="d-flex">
+              <Card className="team-member">
+                <Card.Img
+                  variant="top"
+                  src={PavelPhoto}
+                  className="team-photo"
+                />
+                <Card.Body>
+                  <Card.Title>Pavel</Card.Title>
+                  <Card.Text>
+                    Pět let pracuje jako backend vývojář v Javě, zajímá se o
+                    moderní technologie, framework Spring, automatizaci procesů.
+                    Vždy se snaží najít nejlepší a nejefektivnější řešení.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={6} className="d-flex">
+              <Card className="team-member">
+                <Card.Img
+                  variant="top"
+                  src={VlastaPhoto}
+                  className="team-photo"
+                />
+                <Card.Body>
+                  <Card.Title>Vlasta</Card.Title>
+                  <Card.Text>
+                    Vystudovala aplikovanou informatiku, pracuje jako frontend
+                    vývojář na webových a mobilních aplikacích, a ráda přijímá
+                    nové výzvy, zvlášť pokud jde o zajímavé nápady.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
           <h3 className="about-projects-title">Reference a projekty</h3>
           <p className="about-description">
-            <strong>Účtenkovač</strong> - software pro kategorizovanou evidenci
-            osobních výdajů.
+            <strong>Účtenkovač</strong> - Software pro kategorizovanou evidenci
+            osobních výdajů s využitím OCR a AI.
           </p>
         </Col>
       </Row>
