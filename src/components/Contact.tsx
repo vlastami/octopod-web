@@ -1,30 +1,19 @@
 // src/components/Contact.tsx
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Contact.scss";
 
-const Contact: React.FC = () => {
+const Contact: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <Container>
+    <Container className={`py-5 contact ${className}`}>
       <Row>
         <Col>
-          <h2>Kontakt</h2>
-          <Form>
-            <Form.Group controlId="formName">
-              <Form.Label>Jméno</Form.Label>
-              <Form.Control type="text" placeholder="Vaše jméno" />
-            </Form.Group>
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Váš email" />
-            </Form.Group>
-            <Form.Group controlId="formMessage">
-              <Form.Label>Zpráva</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Odeslat
-            </Button>
-          </Form>
+          <h2 className="contact-title">Kontakt</h2>
+          <p className="contact-description">
+            Kontaktujte nás pro více informací nebo konzultaci ohledně vašeho
+            projektu.
+          </p>
+          {/* Přidejte další obsah podle potřeby */}
         </Col>
       </Row>
     </Container>

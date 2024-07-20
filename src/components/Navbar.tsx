@@ -6,7 +6,7 @@ import "./Navbar.scss";
 
 const AppNavbar: React.FC = () => {
   return (
-    <Navbar bg="light" expand="lg" className="custom-navbar">
+    <Navbar bg="light" expand="lg" className="fixed-top custom-navbar">
       <Container>
         <Navbar.Brand href="#">Octopod Systems</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,47 +1,54 @@
 // src/components/Home.scss
 
-/* Barva pozadí obrázku (přibližně odpovídající barvě pozadí obrázku) */
+body,
+html {
+  overflow-x: hidden; /* Odstranění horizontálního posuvníku */
+  padding-top: -56px;
+}
+
 .hero-section {
   background: linear-gradient(to right, #005f73, #f0f8ff);
-  min-height: 66vh; /* Nastavení výšky hero sekce na 2/3 obrazovky */
+  min-height: 100vh; /* Nastavení výšky hero sekce na celou výšku okna */
   padding: 4rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  width: 100%; /* Zajištění, že obsah nepřesáhne šířku okna */
+  margin: 0; /* Zajištění, že obsah nepřesáhne šířku okna */
 }
 
 .hero-image img {
   width: 100%;
   height: auto;
-  max-width: 66%; /* Maximální šířka obrázku */
-  max-height: 66vh; /* Maximální výška obrázku */
-  border-radius: 50%; /* Nastavení kulatého obrázku */
-  transition: transform 0.5s ease-in-out; /* Přechod pro animaci */
+  max-width: 66%;
+  max-height: 66vh;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .hero-image img:hover {
-  transform: rotate(360deg); /* Animace otočení při najetí myší */
+  transform: rotate(360deg);
 }
 
 .hero-text {
   max-width: 33%;
   text-align: left;
-  color: #000; /* Barva textu */
+  color: #000;
 }
 
 .hero-text h1 {
-  font-size: 3rem; /* Upravená velikost */
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  letter-spacing: 2px; /* Roztáhnutí textu */
+  letter-spacing: 1px;
 }
 
 .hero-text p {
-  font-size: 1.5rem; /* Upravená velikost */
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .hero-text button {
-  font-size: 1.25rem; /* Upravená velikost */
+  font-size: 1.25rem;
   padding: 0.5rem 1.5rem;
 }
