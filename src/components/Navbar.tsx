@@ -1,17 +1,48 @@
 // src/components/Navbar.tsx
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Navbar.scss";
 
 const AppNavbar: React.FC = () => {
+  const [expanded, setExpanded] = useState(false);
+  const navbarRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      navbarRef.current &&
+      !navbarRef.current.contains(event.target as Node)
+    ) {
+      setExpanded(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <Navbar bg="light" expand="lg" className="fixed-top custom-navbar">
+    <Navbar
+      ref={navbarRef}
+      bg="light"
+      expand="lg"
+      expanded={expanded}
+      onToggle={() => setExpanded(!expanded)}
+      className="fixed-top custom-navbar"
+    >
       <Container>
-        <Navbar.Brand href="#">Octopod Systems</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <LinkContainer to="/">
+          <Navbar.Brand>Octopod Systems</Navbar.Brand>
+        </LinkContainer>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setExpanded(!expanded)}
+        />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto" onClick={() => setExpanded(false)}>
             <LinkContainer to="/">
               <Nav.Link>Domů</Nav.Link>
             </LinkContainer>

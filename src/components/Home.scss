@@ -2,20 +2,19 @@
 
 body,
 html {
-  overflow-x: hidden; /* Odstranění horizontálního posuvníku */
-  padding-top: -56px;
+  overflow-x: hidden;
 }
 
 .hero-section {
   background: linear-gradient(to right, #005f73, #f0f8ff);
-  min-height: 100vh; /* Nastavení výšky hero sekce na celou výšku okna */
+  min-height: 100vh;
   padding: 4rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 100%; /* Zajištění, že obsah nepřesáhne šířku okna */
-  margin: 0; /* Zajištění, že obsah nepřesáhne šířku okna */
+  width: 100%;
+  margin: 0;
 }
 
 .hero-image img {
@@ -24,11 +23,12 @@ html {
   max-width: 66%;
   max-height: 66vh;
   border-radius: 50%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .hero-image img:hover {
   transform: rotate(360deg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-text {
@@ -41,14 +41,53 @@ html {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
+}
+
+.hero-text h1:hover {
+  color: #00323c;
 }
 
 .hero-text p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.hero-text p:hover {
+  color: #005f73;
 }
 
 .hero-text button {
   font-size: 1.25rem;
   padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero-text button:hover {
+  background-color: #004d60;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+  }
 }

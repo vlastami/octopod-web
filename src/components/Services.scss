@@ -1,0 +1,84 @@
+// src/components/Services.scss
+
+.services {
+    padding: 1rem 0;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #005f73;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .services-title:hover {
+    color: #00323c;
+  }
+  
+  .services-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #343a40;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .services-description:hover {
+    color: #005f73;
+  }
+  
+  .services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .service-card {
+    border: none;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #005f73;
+    margin-top: 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .service-card .card-title:hover {
+    color: #00323c;
+  }
+  
+  .service-card .card-text {
+    font-size: 1rem;
+    color: #343a40;
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      flex: 0 0 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .service-card .card-title {
+      font-size: 1.25rem;
+    }
+  
+    .service-card .card-text {
+      font-size: 0.9rem;
+    }
+  }
+  

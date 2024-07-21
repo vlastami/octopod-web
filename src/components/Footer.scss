@@ -1,7 +1,14 @@
 // src/components/Footer.scss
+
 .footer {
   padding: 1rem 0;
-  background-color: #343a40; /* Ensure it matches the rest of the site's theme */
+  background-color: #343a40; 
   color: white;
   margin-top: auto;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer:hover {
+  background-color: #2c2f33;
 }

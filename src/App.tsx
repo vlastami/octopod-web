@@ -8,6 +8,8 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 import "./App.scss";
 
 const WithPaddingTop: React.FC<{ children: React.ReactNode }> = ({
@@ -18,41 +20,43 @@ const WithPaddingTop: React.FC<{ children: React.ReactNode }> = ({
 
 const App = () => {
   return (
-    <Router>
-      <div id="root">
-        <AppNavbar />
-        <div className="app-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/about"
-              element={
-                <WithPaddingTop>
-                  <About />
-                </WithPaddingTop>
-              }
-            />
-            <Route
-              path="/services"
-              element={
-                <WithPaddingTop>
-                  <Services />
-                </WithPaddingTop>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <WithPaddingTop>
-                  <Contact />
-                </WithPaddingTop>
-              }
-            />
-          </Routes>
+    <Provider store={store}>
+      <Router>
+        <div id="root">
+          <AppNavbar />
+          <div className="app-container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/about"
+                element={
+                  <WithPaddingTop>
+                    <About />
+                  </WithPaddingTop>
+                }
+              />
+              <Route
+                path="/services"
+                element={
+                  <WithPaddingTop>
+                    <Services />
+                  </WithPaddingTop>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <WithPaddingTop>
+                    <Contact />
+                  </WithPaddingTop>
+                }
+              />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </Provider>
   );
 };
 

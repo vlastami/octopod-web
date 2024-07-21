@@ -1,9 +1,21 @@
 // src/components/Navbar.scss
+
 .custom-navbar {
   background-color: white;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link {
   color: #000 !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .nav-link:hover {
+  color: #00323c !important;
+}
+
+.custom-navbar:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
