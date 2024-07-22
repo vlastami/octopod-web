@@ -1,9 +1,9 @@
 // src/components/Home.tsx
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import "./Home.scss";
 import HeroImage from "../assets/square.png";
-import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Home: React.FC = () => {
   return (
@@ -16,11 +16,9 @@ const Home: React.FC = () => {
           <div>
             <h1 className="display-4">Octopod Systems s. r. o.</h1>
             <p>Máme rádi chobotničky, nuly a jedničky.</p>
-            <Button variant="dark" href="#about">
-              <Link to="/about" className="btn btn-dark">
-                Zjistit více
-              </Link>
-            </Button>
+            <LinkContainer to="/about">
+              <Nav.Link className="btn btn-dark">Zjistit více</Nav.Link>
+            </LinkContainer>
           </div>
         </Col>
         <Col

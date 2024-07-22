@@ -70,10 +70,7 @@ const About: React.FC<{ className?: string }> = ({ className }) => {
             <p>
               <strong>Obchodní firma:</strong> Octopod Systems s.r.o.
             </p>
-            <p>
-              <strong>Sídlo:</strong> Štursova 638/43, Bukov, 400 01 Ústí nad
-              Labem
-            </p>
+
             <p>
               <strong>Identifikační číslo:</strong> 128 10 532
             </p>
@@ -85,17 +82,6 @@ const About: React.FC<{ className?: string }> = ({ className }) => {
               Poskytování software, poradenství v oblasti informačních
               technologií, zpracování dat, hostingové a související činnosti a
               webové portály.
-            </p>
-            <p>
-              <strong>Statutární orgán - jednatel:</strong> Pavel Michalec, dat.
-              nar. 7. března 1994
-            </p>
-            <p>
-              <strong>Společník:</strong> Pavel Michalec, dat. nar. 7. března
-              1994, Štursova 638/43, Bukov, 400 01 Ústí nad Labem
-            </p>
-            <p>
-              <strong>Základní kapitál:</strong> 20 000,- Kč
             </p>
           </div>
         </Col>
