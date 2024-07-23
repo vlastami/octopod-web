@@ -1,5 +1,3 @@
-// src/components/Navbar.scss
-
 .custom-navbar {
   background-color: white;
   transition: box-shadow 0.3s ease-in-out;
@@ -18,4 +16,36 @@
 
 .custom-navbar:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styly pro přepínač jazyka */
+.custom-navbar .nav-dropdown-toggle {
+  color: #000 !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-dropdown-toggle:hover,
+.custom-navbar .nav-dropdown-toggle:focus {
+  background-color: #f0f8ff !important;
+  color: #00323c !important;
+}
+
+.custom-navbar .dropdown-menu {
+  background-color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .dropdown-item {
+  color: #000 !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-navbar .dropdown-item:hover,
+.custom-navbar .dropdown-item:focus {
+  background-color: #f0f8ff !important;
+  color: #00323c !important;
 }

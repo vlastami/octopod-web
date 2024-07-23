@@ -1,0 +1,99 @@
+{
+  "home": {
+    "title": "Octopod Systems s. r. o.",
+    "description": "Máme rádi chobotničky, nuly a jedničky.",
+    "learnMore": "Zjistit více"
+  },
+  "about": {
+    "title": "O nás",
+    "description1": "Jsme tým zkušených vývojářů specializujících se na vývoj softwaru na míru. Naším cílem je poskytovat kvalitní a inovativní řešení, která splňují specifické potřeby našich klientů.",
+    "description2": "Naše služby zahrnují automatizaci procesů a využití umělé inteligence, abychom dodali chytrá a efektivní řešení na míru vašim požadavkům. Jsme schopni vyvinout mobilní, webové i desktopové aplikace, poskytnout poradenství nebo nabídnout dlouhodobou spolupráci.",
+    "teamTitle": "Náš tým",
+    "teamMembers": {
+      "pavel": {
+        "description": "Pět let pracuje jako backend vývojář v Javě, zajímá se o moderní technologie, framework Spring, automatizaci procesů. Vždy se snaží najít nejlepší a nejefektivnější řešení."
+      },
+      "vlasta": {
+        "description": "Vystudovala aplikovanou informatiku, pracuje jako frontend vývojář na webových a mobilních aplikacích, a ráda přijímá nové výzvy, zvlášť pokud jde o zajímavé nápady."
+      }
+    },
+    "projectsTitle": "Reference a projekty",
+    "projectDescription": "<strong>Účtenkovač</strong> - Software pro kategorizovanou evidenci osobních výdajů s využitím OCR a AI.",
+    "legalInfoTitle": "Právní informace",
+    "legalInfo": {
+      "company": "Obchodní firma: Octopod Systems s.r.o.",
+      "id": "Identifikační číslo: 128 10 532",
+      "legalForm": "Právní forma: Společnost s ručením omezeným",
+      "business": "Předmět podnikání: Poskytování software, poradenství v oblasti informačních technologií, zpracování dat, hostingové a související činnosti a webové portály."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontaktujte nás pro více informací nebo konzultaci ohledně vašeho projektu.",
+    "name": "Jméno",
+    "namePlaceholder": "Vaše jméno",
+    "email": "Email",
+    "emailPlaceholder": "Váš email",
+    "message": "Zpráva",
+    "messagePlaceholder": "Vaše zpráva",
+    "submit": "Odeslat",
+    "success": "Zpráva byla úspěšně odeslána!",
+    "error": "Došlo k chybě při odesílání zprávy.",
+    "contactInfo": {
+      "email": "E-mail: michalcovla@gmail.com",
+      "address": "Adresa: Štursova 638/43, 400 01 Ústí nad Labem"
+    }
+  },
+  "services": {
+    "title": "Služby",
+    "description": "Nabízíme širokou škálu služeb v oblasti vývoje softwaru, od webových aplikací po mobilní aplikace, fix-term a fix-price projekty, vývoj softwaru na zakázku a Software as a Service (SaaS) řešení.",
+    "cards": [
+      {
+        "title": "Mobilní aplikace",
+        "description": "Vývoj mobilních aplikací pro iOS a Android. Naše aplikace jsou uživatelsky přívětivé, výkonné a bezpečné."
+      },
+      {
+        "title": "Webové aplikace",
+        "description": "Tvorba moderních webových aplikací s responzivním designem. Používáme nejnovější technologie a postupy."
+      },
+      {
+        "title": "Desktopové aplikace",
+        "description": "Vývoj desktopových aplikací pro Windows, macOS a Linux. Naše aplikace jsou stabilní a snadno použitelné."
+      },
+      {
+        "title": "Automatizace procesů",
+        "description": "Automatizace obchodních procesů pro zvýšení efektivity a snížení nákladů. Pomůžeme vám s digitalizací a optimalizací procesů."
+      },
+      {
+        "title": "Řešení na míru",
+        "description": "Vývoj softwarových řešení na míru vašim potřebám. Přizpůsobíme se vašim požadavkům a vytvoříme řešení, které přesně odpovídá vašim potřebám."
+      },
+      {
+        "title": "Konzultace a úpravy",
+        "description": "Poskytujeme konzultace a úpravy stávajících softwarových řešení. Pomůžeme vám optimalizovat a vylepšit váš software."
+      },
+      {
+        "title": "Fix-term a fix-price projekty",
+        "description": "Nabízíme projekty na fixní dobu a za fixní cenu, abychom zajistili, že vaše projekty budou dokončeny včas a v rámci rozpočtu."
+      },
+      {
+        "title": "Vývoj softwaru na zakázku",
+        "description": "Poskytujeme vývoj softwaru na zakázku, abychom splnili vaše specifické potřeby a požadavky."
+      },
+      {
+        "title": "Software as a Service (SaaS)",
+        "description": "Nabízíme Software as a Service (SaaS) řešení, která jsou flexibilní, škálovatelná a snadno přístupná přes internet."
+      }
+    ]
+  },
+  "navbar": {
+    "home": "Domů",
+    "about": "O nás",
+    "services": "Služby",
+    "contact": "Kontakt",
+    "languageSwitch": "EN"
+  },
+  "footer": {
+    "rights": "© 2024 Octopod Systems s.r.o. Všechna práva vyhrazena."
+  }
+}

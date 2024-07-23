@@ -1,0 +1,99 @@
+{
+  "home": {
+    "title": "Octopod Systems s. r. o.",
+    "description": "We love octopuses, zeros and ones.",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "description1": "We are a team of experienced developers specializing in custom software development. Our goal is to provide quality and innovative solutions that meet the specific needs of our clients.",
+    "description2": "Our services include process automation and the use of artificial intelligence to deliver smart and efficient solutions tailored to your requirements. We are capable of developing mobile, web, and desktop applications, providing consulting services, or offering long-term collaboration.",
+    "teamTitle": "Our Team",
+    "teamMembers": {
+      "pavel": {
+        "description": "He has been working as a backend developer in Java for five years, is interested in modern technologies, Spring framework, and process automation. He always strives to find the best and most efficient solutions."
+      },
+      "vlasta": {
+        "description": "She graduated in applied informatics, works as a frontend developer on web and mobile applications, and enjoys taking on new challenges, especially if they involve interesting ideas."
+      }
+    },
+    "projectsTitle": "References and Projects",
+    "projectDescription": "<strong>Receipt Tracker</strong> - Software for categorized recording of personal expenses using OCR and AI.",
+    "legalInfoTitle": "Legal Information",
+    "legalInfo": {
+      "company": "Business Name: Octopod Systems s.r.o.",
+      "id": "Identification Number: 128 10 532",
+      "legalForm": "Legal Form: Limited Liability Company",
+      "business": "Business Subject: Providing software, IT consulting, data processing, hosting and related activities, and web portals."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Contact us for more information or a consultation about your project.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "submit": "Submit",
+    "success": "Message sent successfully!",
+    "error": "There was an error sending the message.",
+    "contactInfo": {
+      "email": "Email: michalcovla@gmail.com",
+      "address": "Address: Štursova 638/43, 400 01 Ústí nad Labem"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "description": "We offer a wide range of software development services, from web applications to mobile applications, fix-term and fix-price projects, custom software development, and Software as a Service (SaaS) solutions.",
+    "cards": [
+      {
+        "title": "Mobile Applications",
+        "description": "Development of mobile applications for iOS and Android. Our applications are user-friendly, powerful, and secure."
+      },
+      {
+        "title": "Web Applications",
+        "description": "Creation of modern web applications with responsive design. We use the latest technologies and practices."
+      },
+      {
+        "title": "Desktop Applications",
+        "description": "Development of desktop applications for Windows, macOS, and Linux. Our applications are stable and easy to use."
+      },
+      {
+        "title": "Process Automation",
+        "description": "Automation of business processes to increase efficiency and reduce costs. We help you with digitization and optimization of processes."
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Development of custom software solutions tailored to your needs. We adapt to your requirements and create a solution that precisely fits your needs."
+      },
+      {
+        "title": "Consultation and Adjustments",
+        "description": "We provide consultations and adjustments to existing software solutions. We help you optimize and improve your software."
+      },
+      {
+        "title": "Fix-term and Fix-price Projects",
+        "description": "We offer fixed-term and fixed-price projects to ensure your projects are completed on time and within budget."
+      },
+      {
+        "title": "Custom Software Development",
+        "description": "We provide custom software development to meet your specific needs and requirements."
+      },
+      {
+        "title": "Software as a Service (SaaS)",
+        "description": "We offer Software as a Service (SaaS) solutions that are flexible, scalable, and easily accessible via the internet."
+      }
+    ]
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "languageSwitch": "CS"
+  },
+  "footer": {
+    "rights": "© 2024 Octopod Systems s.r.o. All rights reserved."
+  }
+}

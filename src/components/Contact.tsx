@@ -5,8 +5,10 @@ import emailjs from "emailjs-com";
 import "./Contact.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 const Contact: React.FC<{ className?: string }> = ({ className }) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,11 +37,11 @@ const Contact: React.FC<{ className?: string }> = ({ className }) => {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success("Zpráva byla úspěšně odeslána!");
+          toast.success(t("contact.success"));
         },
         (error) => {
           console.log(error.text);
-          toast.error("Došlo k chybě při odesílání zprávy.");
+          toast.error(t("contact.error"));
         }
       );
 
@@ -54,51 +56,50 @@ const Contact: React.FC<{ className?: string }> = ({ className }) => {
     <Container className={`py-5 contact ${className}`}>
       <Row>
         <Col>
-          <h2 className="contact-title">Kontakt</h2>
-          <p className="contact-description">
-            Kontaktujte nás pro více informací nebo konzultaci ohledně vašeho
-            projektu.
-          </p>
+          <h2 className="contact-title">{t("contact.title")}</h2>
+          <p className="contact-description">{t("contact.description")}</p>
           <Form className="contact-form" onSubmit={handleSubmit}>
             <Form.Group controlId="formName">
-              <Form.Label>Jméno</Form.Label>
+              <Form.Label>{t("contact.name")}</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Vaše jméno"
+                placeholder={t("contact.namePlaceholder")}
               />
             </Form.Group>
             <Form.Group controlId="formEmail">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>{t("contact.email")}</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Váš email"
+                placeholder={t("contact.emailPlaceholder")}
               />
             </Form.Group>
             <Form.Group controlId="formMessage">
-              <Form.Label>Zpráva</Form.Label>
+              <Form.Label>{t("contact.message")}</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Vaše zpráva"
+                placeholder={t("contact.messagePlaceholder")}
               />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Odeslat
+              {t("contact.submit")}
             </Button>
           </Form>
           <div className="contact-info">
-            <p className="contact-description">E-mail: michalcovla@gmail.com</p>
             <p className="contact-description">
-              Adresa: Štursova 638/43, 400 01 Ústí nad Labem
+              {t("contact.contactInfo.email")}
+            </p>
+            <p className="contact-description">
+              {t("contact.contactInfo.address")}
             </p>
           </div>
         </Col>

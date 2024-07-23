@@ -4,85 +4,66 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "./About.scss";
 import PavelPhoto from "../assets/pavel.png";
 import VlastaPhoto from "../assets/vlasta.png";
+import { useTranslation } from "react-i18next";
+
+interface TeamMember {
+  name: string;
+  photo: string;
+  description: string;
+}
 
 const About: React.FC<{ className?: string }> = ({ className }) => {
+  const { t } = useTranslation();
+
+  const teamMembers: TeamMember[] = [
+    {
+      name: "Pavel",
+      photo: PavelPhoto,
+      description: t("about.teamMembers.pavel.description"),
+    },
+    {
+      name: "Vlasta",
+      photo: VlastaPhoto,
+      description: t("about.teamMembers.vlasta.description"),
+    },
+  ];
+
   return (
     <Container id="about" className={`py-5 about ${className}`}>
       <Row>
         <Col>
-          <h2 className="about-title">O nás</h2>
-          <p className="about-description">
-            Jsme tým zkušených vývojářů specializujících se na vývoj softwaru na
-            míru. Naším cílem je poskytovat kvalitní a inovativní řešení, která
-            splňují specifické potřeby našich klientů.
-          </p>
-          <p className="about-description">
-            Naše služby zahrnují automatizaci procesů a využití umělé
-            inteligence, abychom dodali chytrá a efektivní řešení na míru vašim
-            požadavkům. Jsme schopni vyvinout mobilní, webové i desktopové
-            aplikace, poskytnout poradenství nebo nabídnout dlouhodobou
-            spolupráci.
-          </p>
-          <h3 className="about-team-title">Náš tým</h3>
+          <h2 className="about-title">{t("about.title")}</h2>
+          <p className="about-description">{t("about.description1")}</p>
+          <p className="about-description">{t("about.description2")}</p>
+          <h3 className="about-team-title">{t("about.teamTitle")}</h3>
           <Row className="about-team">
-            <Col md={6} className="d-flex">
-              <Card className="team-member">
-                <Card.Img
-                  variant="top"
-                  src={PavelPhoto}
-                  className="team-photo"
-                />
-                <Card.Body>
-                  <Card.Title>Pavel</Card.Title>
-                  <Card.Text>
-                    Pět let pracuje jako backend vývojář v Javě, zajímá se o
-                    moderní technologie, framework Spring, automatizaci procesů.
-                    Vždy se snaží najít nejlepší a nejefektivnější řešení.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} className="d-flex">
-              <Card className="team-member">
-                <Card.Img
-                  variant="top"
-                  src={VlastaPhoto}
-                  className="team-photo"
-                />
-                <Card.Body>
-                  <Card.Title>Vlasta</Card.Title>
-                  <Card.Text>
-                    Vystudovala aplikovanou informatiku, pracuje jako frontend
-                    vývojář na webových a mobilních aplikacích, a ráda přijímá
-                    nové výzvy, zvlášť pokud jde o zajímavé nápady.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+            {teamMembers.map((member, index) => (
+              <Col md={6} className="d-flex" key={index}>
+                <Card className="team-member">
+                  <Card.Img
+                    variant="top"
+                    src={member.photo}
+                    className="team-photo"
+                  />
+                  <Card.Body>
+                    <Card.Title>{member.name}</Card.Title>
+                    <Card.Text>{member.description}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
-          <h3 className="about-projects-title">Reference a projekty</h3>
-          <p className="about-description">
-            <strong>Účtenkovač</strong> - Software pro kategorizovanou evidenci
-            osobních výdajů s využitím OCR a AI.
-          </p>
-          <h3 className="legal-info-title">Právní informace</h3>
+          <h3 className="about-projects-title">{t("about.projectsTitle")}</h3>
+          <p
+            className="about-description"
+            dangerouslySetInnerHTML={{ __html: t("about.projectDescription") }}
+          />
+          <h3 className="legal-info-title">{t("about.legalInfoTitle")}</h3>
           <div className="legal-info">
-            <p>
-              <strong>Obchodní firma:</strong> Octopod Systems s.r.o.
-            </p>
-
-            <p>
-              <strong>Identifikační číslo:</strong> 128 10 532
-            </p>
-            <p>
-              <strong>Právní forma:</strong> Společnost s ručením omezeným
-            </p>
-            <p>
-              <strong>Předmět podnikání: </strong>
-              Poskytování software, poradenství v oblasti informačních
-              technologií, zpracování dat, hostingové a související činnosti a
-              webové portály.
-            </p>
+            <p>{t("about.legalInfo.company")}</p>
+            <p>{t("about.legalInfo.id")}</p>
+            <p>{t("about.legalInfo.legalForm")}</p>
+            <p>{t("about.legalInfo.business")}</p>
           </div>
         </Col>
       </Row>

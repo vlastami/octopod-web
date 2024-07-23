@@ -1,10 +1,11 @@
-// src/components/Navbar.tsx
 import React, { useState, useRef, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Navbar.scss";
+import { useTranslation } from "react-i18next";
 
 const AppNavbar: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -23,6 +24,10 @@ const AppNavbar: React.FC = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <Navbar
@@ -44,17 +49,30 @@ const AppNavbar: React.FC = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" onClick={() => setExpanded(false)}>
             <LinkContainer to="/">
-              <Nav.Link>Domů</Nav.Link>
+              <Nav.Link>{t("navbar.home")}</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/about">
-              <Nav.Link>O nás</Nav.Link>
+              <Nav.Link>{t("navbar.about")}</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/services">
-              <Nav.Link>Služby</Nav.Link>
+              <Nav.Link>{t("navbar.services")}</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/contact">
-              <Nav.Link>Kontakt</Nav.Link>
+              <Nav.Link>{t("navbar.contact")}</Nav.Link>
             </LinkContainer>
+          </Nav>
+          <Nav>
+            <NavDropdown
+              title={t("navbar.languageSwitch")}
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item onClick={() => changeLanguage("cs")}>
+                Česky
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => changeLanguage("en")}>
+                English
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
