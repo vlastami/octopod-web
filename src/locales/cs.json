@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Octopod Systems s. r. o.",
-    "description": "Máme rádi chobotničky, nuly a jedničky.",
+    "description": "Zabýváme se vývojem software na míru.",
     "learnMore": "Zjistit více"
   },
   "about": {
@@ -22,9 +22,9 @@
     "legalInfoTitle": "Právní informace",
     "legalInfo": {
       "company": "Obchodní firma: Octopod Systems s.r.o.",
-      "id": "Identifikační číslo: 128 10 532",
+      "id": "Identifikační číslo: 21810532",
       "legalForm": "Právní forma: Společnost s ručením omezeným",
-      "business": "Předmět podnikání: Poskytování software, poradenství v oblasti informačních technologií, zpracování dat, hostingové a související činnosti a webové portály."
+      "business": "Předmět podnikání: Poskytování software, poradenství v oblasti informačních technologií, zpracování dat."
     }
   },
   "contact": {

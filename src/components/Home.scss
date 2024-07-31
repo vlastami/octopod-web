@@ -23,12 +23,13 @@ html {
   max-width: 66%;
   max-height: 66vh;
   border-radius: 50%;
-  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  aspect-ratio: 1 / 1;
 }
 
 .hero-image img:hover {
-  transform: rotate(360deg);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text {
@@ -55,24 +56,48 @@ html {
 }
 
 .hero-text p:hover {
-  color: #005f73;
+  color: #add7e0;
 }
 
-.hero-text button {
+.hero-text .btn-dark {
   font-size: 1.25rem;
   padding: 0.5rem 1.5rem;
   transition: background-color 0.3s ease-in-out;
-  display: inline-block; 
-  width: auto;
-  max-width: fit-content;
+  display: inline-block;
   white-space: nowrap;
+  background-color: transparent;
+  //border: 2px solid #000;
+  border-radius: 0.25rem;
+  text-align: center;
 }
 
-.hero-text button:hover {
-  background-color: #004d60;
+.hero-text .btn-dark:hover {
+  background-color: #005f73;
+  color: #add7e0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 2560px) {
+  .hero-image img {
+    max-width: 50%;
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 1920px) {
+  .hero-image img {
+    max-width: 60%;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero-image img {
+    max-width: 70%;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
   }
@@ -93,5 +118,45 @@ html {
 
   .hero-text p {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .hero-text p {
+    font-size: 0.875rem;
+  }
+
+  .hero-text button {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+    max-height: 40vh;
   }
 }

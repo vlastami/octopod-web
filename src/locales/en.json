@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Octopod Systems s. r. o.",
-    "description": "We love octopuses, zeros and ones.",
+    "description": "We provide custom software development to meet your specific needs and requirements.",
     "learnMore": "Learn More"
   },
   "about": {
@@ -18,13 +18,13 @@
       }
     },
     "projectsTitle": "References and Projects",
-    "projectDescription": "<strong>Receipt Tracker</strong> - Software for categorized recording of personal expenses using OCR and AI.",
+    "projectDescription": "<strong>CheckChecker</strong> - Software for categorized recording of personal expenses using OCR and AI.",
     "legalInfoTitle": "Legal Information",
     "legalInfo": {
       "company": "Business Name: Octopod Systems s.r.o.",
-      "id": "Identification Number: 128 10 532",
+      "id": "Identification Number: 21810532",
       "legalForm": "Legal Form: Limited Liability Company",
-      "business": "Business Subject: Providing software, IT consulting, data processing, hosting and related activities, and web portals."
+      "business": "Business Subject: Providing software, IT consulting, data processing."
     }
   },
   "contact": {

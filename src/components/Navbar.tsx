@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Navbar.scss";
 import { useTranslation } from "react-i18next";
@@ -61,18 +61,25 @@ const AppNavbar: React.FC = () => {
               <Nav.Link>{t("navbar.contact")}</Nav.Link>
             </LinkContainer>
           </Nav>
-          <Nav>
-            <NavDropdown
-              title={t("navbar.languageSwitch")}
-              id="basic-nav-dropdown"
+          <Nav className="ml-auto">
+            <Button
+              variant="light"
+              onClick={() => changeLanguage("cs")}
+              className={`language-switch ${
+                i18n.language === "cs" ? "active" : ""
+              }`}
             >
-              <NavDropdown.Item onClick={() => changeLanguage("cs")}>
-                Česky
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => changeLanguage("en")}>
-                English
-              </NavDropdown.Item>
-            </NavDropdown>
+              Česky
+            </Button>
+            <Button
+              variant="light"
+              onClick={() => changeLanguage("en")}
+              className={`language-switch ${
+                i18n.language === "en" ? "active" : ""
+              }`}
+            >
+              English
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
